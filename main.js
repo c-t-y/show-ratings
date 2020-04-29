@@ -20,7 +20,7 @@ searchBtn.addEventListener('click', searchResults);
 
 async function searchResults() {
     results.innerHTML = '';
-    const response = await fetch(`https://www.omdbapi.com/?apikey=${apiKey}&s=${input.value}`);
+    const response = await fetch(`//www.omdbapi.com/?apikey=${apiKey}&s=${input.value}`);
     const data = await response.json();
     input.value = '';
     //converts results to series only
@@ -47,7 +47,7 @@ async function searchResults() {
         // event delegation for display === 'series'
         if(e.target && e.target.nodeName == "DIV" && display==='series') {
             async function displaySeasons() {
-                const response = await fetch(`https://www.omdbapi.com/?apikey=${apiKey}&i=${e.target.id}`);
+                const response = await fetch(`//www.omdbapi.com/?apikey=${apiKey}&i=${e.target.id}`);
                 const data = await response.json();
                 console.log(data);
                 id = e.target.id;
@@ -71,7 +71,7 @@ async function searchResults() {
         // event delegation for display === 'seasons'
         else if(e.target && e.target.nodeName == "SPAN" && display==='seasons') {
             async function displayEpisodes() {
-                const response = await fetch(`https://www.omdbapi.com/?apikey=${apiKey}&i=${id}&Season=${e.target.id}`);
+                const response = await fetch(`//www.omdbapi.com/?apikey=${apiKey}&i=${id}&Season=${e.target.id}`);
                 const data = await response.json();
                 console.log(data);
                 results.innerHTML = '<div class="refresh-btn"><img onclick="location.reload()" src="refresh.svg" width="20px" id="refresh"></div>';
