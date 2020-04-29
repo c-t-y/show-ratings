@@ -1,8 +1,9 @@
 html, body {
-    height: 95%;
-    background-color: rgb(230, 230, 230);
-    width: 99%;
-    font-family: sans-serif;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(217, 244, 255);
+    font-family: 'Baloo Bhaina 2', cursive;
 }
 
 .container-search {
@@ -14,8 +15,8 @@ html, body {
 }
 
 #input {
-    border: 1px solid grey;
-    border-radius: 8px;
+    border: 2px solid grey;
+    border-radius: 20px;
     padding-left: 20px;
     height: 50px;
     width: 300px;
@@ -27,13 +28,27 @@ html, body {
 
 #search-btn {
     max-width: 30px;
-    padding-left: 10px;
+    border-radius: 30px;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+#search-btn:hover {
+    background-color: rgb(255, 194, 113);
+    transition: all 0.2s;
 }
 
 .container-results {
     display: flex;
     justify-content: center;
+    text-align: center;
     
+}
+
+.container-chart {
+    padding: 30px;
+    width: 400px;
 }
 
 li {
@@ -44,14 +59,57 @@ li {
 
 .sub {
     cursor: pointer;
+    padding: 10px;
+    transition: all 0.2s;
+    border-radius: 10px;
 }
 
 .sub:hover {
-    background-color: lightgray;
+    background-color: rgb(255, 194, 113);
+    transition: all 0.2s;
+    border-radius: 10px;
 }
 
 .results {
-    padding: 10px;
+    align-items: center;
+    text-align: left;
+    padding: 30px;
     line-height: 30px;
     font-size: 20px;
+}
+
+#refresh {
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: all 0.1s;
+}
+
+#refresh:hover {
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: rgb(255, 194, 113);
+    transition: all 0.1s;
+}
+
+.container-series {
+    display:grid;
+}
+
+#description {
+    font-size: 13px;
+    font-family: 'tahoma';
+    font-style: italic;
+}
+
+.poster-big {
+    padding-top: 80px;
+    text-align: center;
+}
+
+.header {
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    height: 40px;
 }
